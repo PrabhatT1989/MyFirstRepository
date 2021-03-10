@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.PolicyBazzar.TestClasses.DashboardTest">
+        <methods>
+          <include name="clearHistory"/>
+          <include name="dashboardMenuLinkImageTest"/>
+          <include name="dashboardtestinitialize"/>
+        </methods>
+      </class> <!-- com.PolicyBazzar.TestClasses.DashboardTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

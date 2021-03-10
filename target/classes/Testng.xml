@@ -1,0 +1,20 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDO Life Customer portal Sanity Test Cases">
+
+	<listeners>
+		<listener class-name="com.qa.ExtentReportListener.ExtentReporterNG" />
+	</listeners>
+
+
+	<test name="BDO Life Customer portal Sanity Test Cases">
+		<classes>
+			<class name="bdo.TestClasses.AdminLoginTest"></class>
+			<class name="com.crm.qa.testcases.HomePageTest"></class>
+			<class name="com.crm.qa.testcases.ContactsPageTest"></class>
+
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PolicyBazzar  Test Suite">
+
+	<listeners>
+		<listener class-name="com.qa.ExtentReportListener.ExtentReporterNG" />
+	</listeners>
+
+
+	<test name="PolicyBazzar App Test Cases">
+		<classes>
+			<class name="com.PolicyBazzar.TestClasses.PolicyBazzarLoginPageTest"></class>
+			<class name="com.PolicyBazzar.TestClasses.DashboardTest"></class>
+			<class name="com.PolicyBazzar.TestClasses.PolicyBazzarProfilesPageTest"></class>
+
+		</classes>
+	</test>
+</suite>
