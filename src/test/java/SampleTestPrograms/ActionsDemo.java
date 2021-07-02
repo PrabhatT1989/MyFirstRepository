@@ -41,7 +41,7 @@ public class ActionsDemo
 		 
 		  wd.findElement(By.xpath("//span[@class='g-menu-item-title' and contains(text(),'Linux')]")).click();
 		  
-		Thread.sleep(2000) ;
+		Thread.sleep(1000) ;
 		 
 		
 	
