@@ -35,15 +35,13 @@ public class ActionsDemo
 		
 		  Thread.sleep(2000);
 		 
-		  WebElement hover = wd.findElement(By.
-		  xpath("//span[@class='g-menu-item-title' and contains(text(),'Web')]"));
+		  WebElement hover = wd.findElement(By.xpath("//span[@class='g-menu-item-title' and contains(text(),'Web')]"));
 		 Actions a= new Actions(wd); a.moveToElement(hover).perform();
 		  
 		 
-		  wd.findElement(By.xpath("//span[@class='g-menu-item-title' and contains(text(),'Linux')]")).
-		  click();
+		  wd.findElement(By.xpath("//span[@class='g-menu-item-title' and contains(text(),'Linux')]")).click();
 		  
-		 Thread.sleep(2000) ;
+		Thread.sleep(2000) ;
 		 
 		
 	

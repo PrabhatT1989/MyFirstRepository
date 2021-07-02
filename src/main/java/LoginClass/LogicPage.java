@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class LogicPage {
 	
@@ -60,6 +61,10 @@ public class LogicPage {
 		System.out.println("Main Window Handle ::" + main_windowhandle);
 		
 		termsandconditions.click();
+		
+		Select s = new Select(termsandconditions);
+		
+		
 		downloadmydocpdf.click();
 		
 		String sub_windowhandles = wd.getWindowHandle();

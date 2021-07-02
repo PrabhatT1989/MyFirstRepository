@@ -14,6 +14,7 @@ abstract  class AbstractDemo
 
 	
 	abstract protected void m2() ;
+	
 	private int y= 10;
 	
 	private  void m3()
@@ -24,7 +25,8 @@ abstract  class AbstractDemo
 	
 	abstract void m4();
 	
-	AbstractDemo() {
+	AbstractDemo() 
+	{
 	}
 	
 	
