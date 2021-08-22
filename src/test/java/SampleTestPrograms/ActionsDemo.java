@@ -29,7 +29,7 @@ public class ActionsDemo
 		wd.manage().window().maximize();
 	}
 
-	@Test
+	@Test(priority =  2 ,testName = "Action Demo")
 	public void actionsDemo() throws Exception
 	{
 		

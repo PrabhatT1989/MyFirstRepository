@@ -5,53 +5,42 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 
 import io.restassured.RestAssured;
-//import io.restassured.RestAssured;
+import io.restassured.http.Method;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 import static org.hamcrest.Matchers.*;
 
 public class RestAssuredProgs {
 	
-	/*
-	 * @Test public void restResource() {
-	 * 
-	 * 
-	 * Response resource = get("http://localhost:8080/lotto/3");
-	 * 
-	 * System.out.println("Status Code : " + (resource.getStatusCode())); ;
-	 * System.out.println("SessionID :: " + (resource.getSessionId()));
-	 * System.out.println("Time :: " + (resource.getTime()));
-	 * System.out.println("Response :: " + (resource.getBody().asString()));
-	 * 
-	 * 
-	 * }
-	 */
+@Test
+public void testPostMethod()
+{
+RestAssured.baseURI = "https://reqres.in/";	
 
-	@Test
-	public void secondDemoProgram() {
-		int responsecode = given().get("https://reqres.in/api/users/2").getStatusCode();
+RequestSpecification requestspec = RestAssured.given();
 
-		System.out.println("Response :: " + responsecode);
-		
-	}
-	
-	@Test
-	public void thirdDemoProgram() {
-	given().get("https://reqres.in/api/users/2").then().log().all();
-	
+String requestbody = "{\r\n"
+		+ "    \"name\": \"morpheus\",\r\n"
+		+ "    \"job\": \"leader\"\r\n"
+		+ "}"; 
+
+Response response = requestspec.body(requestbody).contentType("application/JSON").and().request(Method.POST, "/api/users");
+
+
+
+String responsepayload = response.getBody().asPrettyString();
+
+System.out.println("Response Payload :: " + responsepayload);
+
+int responsecode = response.getStatusCode() ;
+System.out.println("Post Response Code = " + responsecode);
+
+String statusline = response.getStatusLine();
+
+System.out.println("Post Status Line :: " + statusline);
+
+
 }
-	
-	
-	@Test
-	public void toolsQA1()
-	{
-		
-	//	given().get("http://demoqa.com/utilities/weather/city/Hyderabad").header("application/json").w
-		
-		given().get("http://demoqa.com/utilities/weather/city/Hyderabad").then().bod
-		
-		
-		
-	}
 
 }

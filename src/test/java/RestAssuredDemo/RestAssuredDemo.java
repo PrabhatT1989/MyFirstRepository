@@ -1,5 +1,8 @@
 package RestAssuredDemo;
 
+import java.util.HashMap;
+
+import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
@@ -11,13 +14,21 @@ public class RestAssuredDemo {
 	@Test
 	public void demo()
 	{
+	
+		RestAssured.baseURI = "https://reqres.in/";
 		
-	Response rs = 	RestAssured.get("https://developers.google.com/calendar/api/guides/overview");
+		RequestSpecification requestspecification = RestAssured.given();
+		
+		
+		HashMap<String, String> hm =  new HashMap<String, String>();
+		
+		hm.put("name", "Prabhat");
+		hm.put("job","leader");
+		
+
+		JSONObject jo = new JSONObject(hm);
 	
-	System.out.println("Headers :: " +(rs.getHeaders()));;
-	System.out.println("BODY :: " +(rs.getBody().asPrettyString()));
-	
-	
+		
 	}
 
 }
